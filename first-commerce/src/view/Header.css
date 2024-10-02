@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+/* Navbar container */
+.nav-container {
+  background-color: transparent;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* Left side (logo) */
+.nav-container .left-side {
+  flex-grow: 1; /* Allows the logo to push mid-side to the left */
+}
+
+/* Center navigation links */
+.nav-container .mid-side {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers links horizontally */
+  margin-right: 200px;
+}
+
+.nav-container .mid-side a {
+  text-decoration: none;
+  color: #fafafa;
+  margin: 0 15px; /* Consistent spacing between links */
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-container .mid-side a:hover {
+  color: #edb932;
+
+}
+
+/* Shopping Basket Icon */
+.basket-icon {
+  position: relative; /* Enable positioning context for the badge */
+  display: inline-block; /* Allows the badge to be positioned correctly */
+  margin-left: 30px;
+}
+
+.badge {
+  position: absolute; /* Position it relative to the basket icon */
+  top: -16px; /* Move it above the basket */
+  right: -15px; /* Move it slightly to the right */
+  background-color: #edb932; /* Background color of the circle */
+  color: black; /* Text color */
+  font-weight: bold;
+  border-radius: 50%; /* Make it a circle */
+  width: 20px; /* Width of the circle */
+  height: 20px; /* Height of the circle */
+  display: flex; /* Center content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-size: 12px; /* Font size of the number */
+}
+
+
+/* Full-Screen Header */
+header {
+    height: 100vh; /* Full height */
+    background: url('../assets/images/Header2.jpg') no-repeat top center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    color: white;
+    text-align: center;
+    position: relative; /* Relative positioning for child elements */
+}
+
+header h1 {
+    font-size: 3.1rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    max-width: 570px;
+    line-height: 25px;
+}
+
+header button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 150px; /* Adjust padding as needed */
+    padding-top: 50px;
+    color: #fff;
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+.store-name {
+    position: relative; /* Position for the line */
+    margin-bottom: 10px; /* Space between the line and the next text */
+    color: #edb932;
+    font-size: 12px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    left: 13px;
+}
+
+.store-name::before {
+    content: ""; /* Empty content for the line */
+    display: block; /* Display as a block element */
+    height: 0.5px; /* Height of the line */
+    width: 29px; /* Length of the line */
+    background-color: gold; /* Color of the line */
+    position: absolute; /* Position it absolutely */
+    left: -40px; /* Align it to the left with some space */
+    top: 50%; /* Center vertically relative to the text */
+    transform: translateY(-50%); /* Adjust for the height of the line */
+}
+
+
+.header-container .shop-button {
+    background-color: #edb932;
+    width: 160px;
+    fill: #000;
+    height: 40px;
+    color: #000;
+    font-size: 0.75rem;
+    line-height: 1em;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-color: #edb932;
+    font-weight: 600;
+}

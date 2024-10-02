@@ -1,0 +1,87 @@
+.subscribe-section {
+    display: flex;
+    width: 100%;              /* Full width of the screen */
+    align-items: center;      /* Vertically center the content */
+    margin-top: 130px;
+}
+
+.subs-image {
+    width: 56%;               /* Set image container to 50% width */
+    height: 370px;            /* Fixed height for the image */
+}
+
+.subs-image img {
+    width: 100%;              /* Ensure the image stretches to full width */
+    height: 100%;             /* Ensure the image fills the height */
+    object-fit: cover;        /* Proper scaling and cropping for the image */
+}
+
+.subs-box {
+    width: 44%;               /* Set subscription box to 50% width */
+    padding: 40px;
+    background-color: white;  /* White background for the subscription box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center content vertically */
+    height: 290px;
+}
+
+.subs-box p {
+    margin-bottom: 10px;
+    position: relative;       /* Necessary for positioning the ::before */
+    font-weight: bold;        /* Bold text for emphasis */
+    left: 60px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #bc9127;
+}
+
+.subs-box p::before {
+    content: "";              /* Empty content to create a visual element */
+    width: 50px;              /* Width of the line before the text */
+    height: 1px;              /* Thickness of the line */
+    background-color: #bc9127;  /* Color of the line */
+    position: absolute;       /* Absolute positioning relative to the p element */
+    top: 50%;                 /* Vertically center the line */
+    left: -60px;              /* Move the line to the left of the text */
+    transform: translateY(-50%); /* Correct vertical centering */
+}
+
+.subs-box h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.input-button {
+    display: flex;            /* Make input and button inline */
+    gap: 10px;                /* Add space between input and button */
+    margin-bottom: 20px;      /* Space below the input/button */
+}
+
+input[type="text"] {
+    flex: 1;                  /* Make input take most of the width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+}
+
+.input-button button {
+    padding: 10px 20px;
+    background-color: #edb932;
+    border-color: #edb932;
+    color: #1a1a1a;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background-color 0.3s;
+}
+
+
+.subs-box h4 {
+    margin-top: 20px;         /* Space above the final line */
+    font-size: 14px;
+    color: #666;
+}

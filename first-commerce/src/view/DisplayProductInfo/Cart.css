@@ -1,0 +1,73 @@
+/* CartPage.css */
+
+.cart-container {
+    max-width: 900px; /* Set max width for the container */
+    margin: 0 auto; /* Center align the container */
+    padding: 50px; /* Padding for the container */
+    font-family: Arial, sans-serif; /* Font family for text */
+    margin-top: 100px;
+}
+
+.carttable {
+    background-color: white; /* White background for the table container */
+    border-radius: 8px; /* Rounded corners for the table container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for visual separation */
+    padding: 50px; /* Padding inside the white box */
+    margin-top: 20px; /* Space above the table */
+}
+
+.cart-table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #dddddd; /* Light grey border for table cells */
+    text-align: left; /* Left align text in table */
+    padding: 12px; /* Padding for table cells */
+}
+
+.cart-table th {
+    background-color: #f2f2f2; /* Light grey background for table headers */
+}
+
+.cart-table tr:hover {
+    background-color: #f9f9f9; /* Highlight row on hover */
+}
+
+.thumbnail {
+    width: 50px; /* Thumbnail image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners for thumbnails */
+}
+
+h1 {
+    font-size: 24px; /* Font size for main title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+h2 {
+    font-size: 20px; /* Font size for secondary titles */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+h3 {
+    margin-top: 20px; /* Margin for spacing above h3 */
+}
+
+
+.checkoutbutton{
+    background-color: #edb932; /* Green background for "Add to Cart" button */
+    color: #1a1a1a;
+    padding: 17px 56px;
+    border: none;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 300px;
+    margin-top: 40px;
+}

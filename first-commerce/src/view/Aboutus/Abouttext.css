@@ -1,0 +1,49 @@
+/* Abouttext.css */
+.about-container2 {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center; /* Center align the main text */
+    margin: 20px; /* Optional: Add margin around the container */
+}
+
+.main-text {
+    text-align: start; /* Center align the main text */
+    padding: 20px; /* Add padding for better spacing */
+    width: 80%; /* Optional: Limit the width */
+}
+
+.main-text p{
+    font-weight: 700;
+    color: #7A7A7A;
+}
+
+.bottom-row {
+    display: flex; /* Use flexbox for bottom text sections */
+    justify-content: space-between; /* Space between left and right sections */
+    max-width: 1200px; /* Optional: Limit the max width */
+    margin-top: 20px; /* Add margin above the bottom row */
+}
+
+.left-text, .right-text {
+    flex: 1; /* Allow left and right texts to take equal space */
+    padding: 20px; /* Add padding for better spacing */
+    width: 60%;
+}
+
+.left-text, .right-text p{
+    color: #7A7A7A;
+    font-weight: 100;
+}
+
+.left-text {
+    text-align: left; /* Align left text to the left */
+}
+
+.right-text {
+    text-align: right; /* Align right text to the right */
+}
+
+/* Optional: Style the paragraphs for better readability */
+p {
+    line-height: 1.5; /* Increase line height for better readability */
+}

@@ -1,0 +1,47 @@
+/* Overall container for the Salesup section */
+.salesup-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center vertically */
+    margin: 100px; /* Margin around the container */
+    margin-top: 210px;
+}
+
+/* Content styles */
+.content {
+    background-color: white; /* White background for the content */
+    padding: 50px; /* Padding inside the white box */
+    box-shadow: 0 40px 33px rgba(0, 0, 0, 0.2); /* Shadow from the bottom */
+    width: 50%; /* Adjust width as needed */
+    position: relative; /* Position relative for overlapping */
+    z-index: 1; /* Ensure the content is above the image */
+    margin-right: -60px; /* Adjust this value to move the box to the right */
+}
+
+.content h1{
+    font-size: 25px;
+    color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Image styles */
+.image {
+    position: relative; /* Ensure the image is positioned properly */
+}
+
+.image img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Button styles */
+.content button {
+    padding: 10px 20px; /* Button padding */
+    background-color: #edb932; /* Button color */
+    border-radius: 0;
+    color: #1a1a1a; /* Button text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Space above the button */
+    font-size: 13px;
+}

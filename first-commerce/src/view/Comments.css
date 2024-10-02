@@ -1,0 +1,86 @@
+.comments-section {
+    margin-top: 150px;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.left-part1 {
+    font-size: 0.8rem;
+}
+
+.left-part1 h1 {
+    color: #1a1a1a;
+    font-size: 2rem; /* Larger font for the heading */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+
+
+.right-part1 {
+    display: flex;
+}
+
+.right-part1 button {
+    padding: 10px 20px;
+    background-color: #edb932;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.right-part1 button:hover {
+    background-color: #d6a324; /* Darker shade on hover */
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center; /* Space between cards */
+    margin-top: 20px;
+    gap: 20px; /* Spacing between cards */
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column; /* Stack image above text */
+    align-items: center;
+    width: 300px; /* Adjust width for a more compact look */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Animation on hover */
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.testimonial-card img {
+    width: 100px; /* Set image size */
+    height: 100px; /* Set image size */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 10px; /* Space between image and text */
+    border: 2px solid #bc9127; /* Border for the image */
+}
+
+.testimonial-content {
+    text-align: center; /* Center align text */
+}
+
+.testimonial-content h3 {
+    margin-top: 10px; /* Space above the name */
+    margin-bottom: 0; /* Remove default margin */
+    font-weight: bold; /* Bold for emphasis */
+    color: #1a1a1a; /* Text color */
+}

@@ -1,0 +1,208 @@
+/* General styles for the cards section */
+.cards {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line for responsiveness */
+    justify-content: space-between; /* Space between cards */
+    max-width: 1200px; /* Limit the width of the container */
+    margin: 0 auto; /* Center the cards section */
+    padding: 20px; /* Add some padding around the cards */
+}
+
+/* Individual card styles */
+.card {
+    position: relative; /* Allow positioning of absolute elements */
+    padding: 20px; /* Space inside the card */
+    width: 20%; /* Each card takes up about 20% of the width */
+    margin-bottom: 20px; /* Space below each card */
+    text-align: center; /* Center the text in each card */
+    height: 410px;
+    transition: transform 0.9s ease; /* Smooth hover effect */
+    padding-right: 40px;
+}
+
+.sale-badge {
+    top: 10px; /* Position the badge at the top of the card */
+    left: 10px; /* Slight padding from the left edge */
+    background-color: white;
+    color: #333;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Add a hover effect for each card */
+.card:hover {
+    transform: scale(1.01); /* Scale up slightly on hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Image styles inside the card */
+.card img {
+    width: 120%; /* Make the image fill the width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners on images */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Text inside each card */
+.card p {
+    color: #333; /* Darker text for readability */
+    margin-bottom: 10px; /* Space between text elements */
+    font-size: .85em;
+}
+
+.card h1 {
+    color: #bc9127;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: 48%; /* Two cards per row on tablets and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Full-width cards on mobile */
+    }
+}
+
+/* Container for icons */
+.icon-container {
+    position: absolute; /* Position the icons at the top */
+    top: 10px; /* Adjust the distance from the top */
+    right: 10px; /* Adjust the distance from the right */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-end; /* Align items to the right */
+}
+
+/* Common styles for icons */
+.add-to-cart-icon,
+.view-details-icon {
+    cursor: pointer; /* Pointer cursor for hover effect */
+    color: #1a1a1a; /* Default icon color */
+    font-size: 24px; /* Icon size */
+    background-color: #ffffff; /* Background for better visibility */
+    border-radius: 50%; /* Rounded icon background */
+    padding: 5px; /* Padding around the icon */
+}
+
+/* Icons only visible in the first card */
+.card:first-child .icon-container {
+    display: flex; /* Display icons normally for the first card */
+}
+
+/* Hide icons for other cards by default */
+.card:not(:first-child) .icon-container {
+    display: none; /* Hide icons */
+}
+
+/* Show icons on hover for other cards */
+.card:not(:first-child):hover .icon-container {
+    display: flex; /* Show icons on hover */
+}
+
+/* Add space between icons */
+.add-to-cart-icon {
+    margin-bottom: 10px; /* Space between the basket and eye icons */
+    font-size: 20px;
+    color: #6c6c6c;
+}
+
+.view-details-icon{
+    font-size: 20px;
+    color: #6c6c6c;
+}
+
+/* Hover effects for icons */
+.add-to-cart-icon:hover,
+.view-details-icon:hover {
+    color: #bc9127; /* Color change on hover */
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Container for the success popup */
+.success-popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Dark background overlay */
+.success-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 1000; /* Keep the overlay above other content */
+}
+
+/* Success message styling */
+.success-popup {
+    background-color: white; /* Green background */
+    color: black;
+    width: auto;
+    height: auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    z-index: 1001; /* Ensure the popup is above the overlay */
+    text-align: center;
+    animation: fadeIn 0.5s, fadeOut 0.5s 1.5s; /* Animation for fade in and out */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}

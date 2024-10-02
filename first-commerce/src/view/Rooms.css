@@ -1,0 +1,86 @@
+/* General styles for the Rooms section */
+.rooms-container {
+    display: flex; /* Flexbox to align items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 0 auto; /* Center the section */
+    width: 100vw; /* Full width of the viewport */
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    margin-top: 100px;
+}
+
+/* Individual room styles */
+.rooms-container div {
+    position: relative; /* So titles can be positioned over images */
+    flex: 1; /* Equal width for each room */
+    min-width: 25%; /* 4 rooms per row on large screens */
+    max-width: 25%;
+    overflow: hidden; /* Hide any overflow from image scaling */
+}
+
+/* Image styles */
+.rooms-container div img {
+    width: 100%; /* Full width of the div */
+    height: 100%; /* Full height to maintain container size */
+    object-fit: cover; /* Ensure the image covers the entire div */
+    filter: brightness(0.5); /* Darkly effect on images */
+    transition: transform 0.5s ease; /* Smooth hover effect */
+}
+
+/* Title styles */
+.rooms-container div h2 {
+    display: inline-flex; /* Use inline-flex to align the icon */
+    align-items: center; /* Center items vertically */
+    position: absolute;
+    bottom: 10px; /* Position title at the bottom */
+    left: 10px; /* Slight padding from the left */
+    color: #fff;
+    padding: 10px; /* Padding around the text */
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.rooms-container div h2:hover{
+    color: #bc9127;
+}
+
+/* Arrow icon styles */
+.arrow-icon {
+    margin-left: 10px; /* Space between the text and the arrow */
+    margin-top: 0; /* No vertical offset */
+    transform: rotate(0deg); /* No rotation */
+    font-size: 1.5em; /* Adjust size as needed */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Optional: Change arrow color on hover */
+.rooms-container div h2:hover .arrow-icon {
+    color: #bc9127; /* Change color on hover for better visibility */
+}
+
+/* Hover effect for images */
+.rooms-container div:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+    .rooms-container div {
+        min-width: 50%; /* 2 rooms per row on tablets */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .rooms-container div {
+        min-width: 100%; /* 1 room per row on mobile */
+        max-width: 100%;
+    }
+
+    .rooms-container div h2 {
+        font-size: 1.2em; /* Adjust title size for mobile */
+    }
+}

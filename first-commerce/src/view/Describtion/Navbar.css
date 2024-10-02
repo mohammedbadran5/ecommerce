@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+}
+/* Navbar container */
+.nav-container1 {
+    background-color: white;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+h3 , h4{
+    color: black;
+}
+
+/* Left side (logo) */
+.nav-container1 .left-side1 {
+  flex-grow: 1; /* Allows the logo to push mid-side to the left */
+}
+
+/* Center navigation links */
+.nav-container1 .mid-side1 {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers links horizontally */
+  margin-right: 200px;
+}
+
+.nav-container1 .mid-side1 a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px; /* Consistent spacing between links */
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-container1 .mid-side1 a:hover {
+  color: #007bff;
+}
+
+/* Shopping Basket Icon */
+.basket-icon1 {
+  position: relative; /* Enable positioning context for the badge */
+  display: inline-block; /* Allows the badge to be positioned correctly */
+  margin-left: 30px;
+}
+
+.badge1 {
+  position: absolute; /* Position it relative to the basket icon */
+  top: -16px; /* Move it above the basket */
+  right: -15px; /* Move it slightly to the right */
+  background-color: #edb932; /* Background color of the circle */
+  color: black; /* Text color */
+  font-weight: bold;
+  border-radius: 50%; /* Make it a circle */
+  width: 20px; /* Width of the circle */
+  height: 20px; /* Height of the circle */
+  display: flex; /* Center content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-size: 12px; /* Font size of the number */
+}

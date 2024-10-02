@@ -1,0 +1,73 @@
+/* Features section wrapper */
+.features-section-wrapper {
+    margin-top: 1px; /* Space between item details and features section */
+}
+
+/* Flex container for Features and Care Instructions */
+.features-section {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    justify-content: center;
+    margin: 68px;
+}
+
+/* Right box styling */
+.right-box {
+    width: 35%; /* Set width for the right box */
+    padding: 80px;
+    padding-top: 45px;
+    border: 1px solid rgba(3, 3, 3, 0.1);;
+    border-radius: 0px;
+    margin-bottom: 20px; /* Space between the boxes */
+    /* Align to the right */
+    
+}
+
+/* Left box styling */
+.left-box {
+    width: 35%; /* Set width for the right box */
+    padding: 80px;
+    padding-top: 45px;
+    border: 1px solid rgba(3, 3, 3, 0.1);;
+    border-radius: 0px;
+    align-self: flex-end; /* Align right box to the right */
+}
+
+/* Title styling */
+.left-box h1, .right-box h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    line-height: 100px;
+    display: flex;
+    justify-content: center;
+    color: #333;
+}
+
+/* Paragraph styling */
+.left-box p, .right-box p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Done work styling */
+.done-work h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: inherit;
+    transition: 0.4s;
+}
+
+.done-work h3:hover{
+    color: #6c6c6c;
+}
+
+.done-work h3::before {
+    content: '✔️';
+    margin-right: 10px;
+    color: #bc9127;
+}

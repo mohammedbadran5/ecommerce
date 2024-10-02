@@ -1,0 +1,98 @@
+.window {
+    position: fixed; /* Fix it to the right side */
+    right: 0; /* Align to the right */
+    top: 0; /* Align to the top */
+    width: 500px; /* Adjust width as needed */
+    height: 100%; /* Full height */
+    background-color: white; /* White background */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    z-index: 20; /* Keep it above other content */
+    padding: 20px; /* Padding for content */
+    display: flex;
+    flex-direction: column; /* Column layout */
+}
+
+.window-top {
+    display: flex; /* Flex for aligning items */
+    justify-content: space-between; /* Space between title and close icon */
+    align-items: center; /* Center vertically */
+    transition: 0.5s;
+    margin: -10px;
+}
+
+.window-top h4 {
+    font-size: 14px;
+}
+
+.window-top::after {
+    content: ""; /* Required for the pseudo-element */
+    position: absolute; /* Position it absolutely within the top */
+    top: 56px; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    height: 0.5px; /* Height of the line */
+    background-color: #dddddd; /* Color of the line */
+    opacity: 0.8; /* Slightly transparent for subtlety */
+}
+
+.window-middle {
+    flex-grow: 1; /* Take up remaining space */
+    height: auto;
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: flex;
+    justify-content: center; /* Center the content */
+}
+
+.cart-items-list {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Full width */
+}
+
+.cart-item {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+    padding: 10px; /* Padding for items */
+    border-bottom: 1px solid #ccc; /* Separator line */
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item-details h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-item-details p {
+    margin: 5px 0 0;
+    color: #6c6c6c;
+}
+
+.window-bottom {
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.window-bottom button {
+    margin-bottom: 20px; /* Push to bottom */
+    display: flex;
+    justify-content: center; /* Center the button */
+    transition: 0.5s;
+    border-radius: 0;
+    width: 100%;
+    background-color: #edb932;
+}
+
+
+.quantity-control{
+    display: flex;
+    justify-content: center;
+}
+
+

@@ -1,0 +1,38 @@
+/* Related.css */
+.related-products {
+    display: flex; /* Align cards in a row */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Space above the related products section */
+}
+
+.related-card {
+    background-color: white; /* Background color for card */
+    border: 1px solid #ccc; /* Border for card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 15px; /* Padding inside the card */
+    text-align: center; /* Center text inside card */
+    width: 200px; /* Fixed width for cards */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.related-card img {
+    width: 100%; /* Make image responsive to card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.related-card h2 {
+    font-size: 18px; /* Title font size */
+    margin: 10px 0; /* Space above and below the title */
+}
+
+.related-card p {
+    font-size: 14px; /* Description font size */
+    color: #666; /* Description text color */
+}
+
+/* Add hover effect */
+.related-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+}

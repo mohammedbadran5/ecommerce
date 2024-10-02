@@ -1,0 +1,102 @@
+.features {
+    padding: 40px;                /* Increased padding for more spacing */
+    margin-top: 150px;
+    border-radius: 10px;          /* Rounded corners for the section */
+}
+
+.header {
+    text-align: center;            /* Center the header */
+    margin-bottom: 30px;          /* Space below the header */
+}
+
+.left-part2 h1 {
+    font-size: 32px;              /* Larger heading */
+    color: #333;                  /* Darker text color */
+}
+
+.feat {
+    display: flex;                /* Use flexbox for layout */
+    justify-content: center;      /* Center items horizontally */
+    flex-wrap: wrap;              /* Allow items to wrap on smaller screens */
+}
+
+.props {
+    display: flex;                /* Use flexbox for the props container */
+    justify-content: center;
+    width: 100%;                 /* Full width */
+    max-width: 1200px;           /* Max width to limit expansion */
+}
+
+.prop {
+    flex: 1;                     /* Equal space for each prop */
+    margin: 20px;               /* Margin around each prop for spacing */
+    padding: 20px;              /* Increased padding inside each prop */
+    border-radius: 5px;         /* Slightly rounded corners */
+    text-align: center;          /* Center text */
+    background-color: #fff;     /* White background for each prop */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for each prop */
+    transition: transform 0.3s;  /* Smooth hover effect */
+}
+
+.prop:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.prop h1 {
+    font-size: 22px;             /* Larger font size for headings */
+    color: #1a1a1a;              /* Dark text color */
+    margin-bottom: 10px;         /* Space below heading */
+}
+
+.prop p {
+    font-size: 14px;             /* Font size for paragraphs */
+    color: #666;                 /* Dark grey for better readability */
+}
+
+.icon {
+    font-size: 40px;             /* Larger icons */
+    color: #edb932;              /* Icon color */
+    margin-bottom: 15px;         /* Space below icon */
+}
+
+.cta-button {
+    margin-top: 30px;            /* Space above the button */
+    padding: 15px 30px;          /* Button padding */
+    font-size: 16px;             /* Button font size */
+    color: #fff;                 /* Button text color */
+    background-color: #edb932;   /* Button background color */
+    border: none;                /* Remove border */
+    border-radius: 5px;         /* Rounded corners */
+    cursor: pointer;             /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.cta-button:hover {
+    background-color: #d0a72d;   /* Darker shade on hover */
+}
+
+
+
+
+.left-part2 p{
+  
+        position: relative; /* Position relative for the ::before element */
+        color: #bc9127; /* Dark text for readability */
+        margin-bottom: 10px; /* Space below the paragraph */
+        left: 10px;
+        font-size: 12px;
+
+    
+    /* Add the ::before pseudo-element for "Best Seller" */
+    .left-part2 p::before {
+        content: ""; /* Empty content for the line */
+        display: block; /* Block element for the line */
+        height: 0.5px; /* Line height */
+        width: 120px; /* Line width */
+        background-color: #bc9127; /* Line color */
+        position: absolute; /* Positioning the line */
+        left: 20px; /* Move it to the left */
+        top: 50%; /* Verticaly align the line with the text */
+        transform: translateY(-50%); /* Adjust vertical alignment */
+    }
+}

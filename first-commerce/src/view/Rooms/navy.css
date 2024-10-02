@@ -1,0 +1,22 @@
+.title {
+    text-align: center; /* Center align the text */
+    margin: 150px 0; /* Margin for spacing */
+    padding: 20px; /* Padding for a better layout */
+    background-color: #f8f8f8; /* Light background for contrast */
+}
+
+.title h1 {
+    font-size: 40px; /* Larger font size for the title */
+    font-weight: bold; /* Bold font for emphasis */
+    color: black; /* Dark color for contrast */
+    margin: 0 0 10px; /* Margin below the title */
+}
+
+.title p {
+    font-size: 16px; /* Font size for the description */
+    color: #7A7A7A; /* Softer color for the description */
+    line-height: 1.6; /* Spacing between lines for readability */
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the description */
+    margin-top: 30px;
+}

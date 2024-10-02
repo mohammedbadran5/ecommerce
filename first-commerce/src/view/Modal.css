@@ -1,0 +1,112 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal container now has a more rectangular shape */
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 0px;
+    max-width: 900px; /* Make the modal wider */
+    width: 80%;       /* Take 80% of the screen width for a rectangular feel */
+    height: 350px;    /* Set a fixed height for the rectangular shape */
+    position: relative;
+    display: flex;    /* Flexbox for easier layout management */
+    flex-direction: column; /* Ensures content stacks vertically */
+    justify-content: space-between; /* Space between content */
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-control button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.quantity-control span {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/* Adjust image and content layout for the rectangular modal */
+.item-container1 {
+    display: flex;
+    flex-direction: row;  /* Side-by-side layout */
+    height: 100%;
+}
+
+.item-image1 img {
+    width: 70%;   /* Image takes up 50% of the modal width */
+    height: 120%; /* Ensures the image fills its container */
+    object-fit: cover; /* Maintain aspect ratio, crop excess */
+    border-radius: 8px;
+}
+
+.item-content1 {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Adjust "Add to Cart" button to fit within the new layout */
+.quantity-control .add-to-cart {
+    background-color: #edb932;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 30%;
+    text-align: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .modal {
+        width: 90%;
+        height: auto; /* Make the height flexible on smaller screens */
+    }
+
+    .item-container1 {
+        flex-direction: column; /* Stack the image and content vertically */
+    }
+
+    .item-image1 img {
+        width: 100%; /* Image takes full width */
+        height: 200px; /* Set a fixed height for smaller screens */
+    }
+
+    .item-content1 {
+        padding-left: 0;
+        text-align: center;
+    }
+}

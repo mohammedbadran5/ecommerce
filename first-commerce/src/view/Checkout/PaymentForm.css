@@ -1,0 +1,71 @@
+body {
+    overflow: auto; /* Allow scrolling */
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    max-width: 1000px; /* Maximum width for better layout */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+h2 {
+    text-align: center; /* Center the main title */
+}
+
+.billing-details {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 20px; /* Space between rows */
+}
+
+/* Each row styling */
+.row {
+    display: flex; 
+    justify-content: space-between; /* Space out inputs */
+    gap: 10px; /* Space between inputs */
+}
+
+/* For inputs */
+input, select, textarea {
+    padding: 10px;
+    margin: 5px 0; /* Vertical margin */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Full width */
+}
+
+/* For two input fields in a row */
+.row.double input {
+    flex: 1; /* Equal space for both inputs */
+}
+
+.label {
+    margin-bottom: 10px;
+    display: block; /* Block display for better spacing */
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.pay-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Add margin on top */
+}
+
+.pay-button:hover {
+    background-color: #218838;
+}

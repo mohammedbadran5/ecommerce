@@ -1,0 +1,188 @@
+/* Overall container for the Bestselling section */
+.bestselling-container {
+    margin: 100px; /* Add some margin around the container */
+    margin-top: 140px;
+}
+
+/* Header styles */
+.header {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between left text and button */
+    align-items: center; /* Center vertically */
+}
+
+/* Left part styles */
+.left-part2 {
+    position: relative; /* To position the line */
+    font-size: 0.8rem;
+    margin-bottom: 80px; /* Space below the text */
+    width: 380px;
+    left: 50px;
+}
+
+.left-part2 h1{
+    color: #1a1a1a;
+    width: 450px;
+}
+
+.left-part2 p {
+    position: relative; /* Position relative for the ::before element */
+    color: #bc9127; /* Dark text for readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    left: 10px;
+    font-size: 12px;
+}
+
+/* Add the ::before pseudo-element for "Best Seller" */
+.left-part2 p::before {
+    content: ""; /* Empty content for the line */
+    display: block; /* Block element for the line */
+    height: 0.5px; /* Line height */
+    width: 120px; /* Line width */
+    background-color: #bc9127; /* Line color */
+    position: absolute; /* Positioning the line */
+    left: 20px; /* Move it to the left */
+    top: 50%; /* Verticaly align the line with the text */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+/* Right part styles */
+.right-part2 {
+    display: flex;
+}
+
+/* Button styles */
+.right-part2 button {
+    padding: 10px 20px; /* Button padding */
+    background-color: #edb932; /* Button color */
+    color: #1a1a1a; /* Button text color */
+    border: none; /* Remove border */
+    border-radius:0;
+    font-size: 0.85rem;
+    height: 50px;
+    width: 250px;
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 200px;
+    transition: .3s;
+}
+
+.right-part2 button:hover{
+    color: white;
+}
+/* Seller section styles */
+.seller {
+    display: flex; /* Use flexbox for the cards */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: space-between; /* Space between cards */
+    margin-top: 20px; /* Space above the cards */
+}
+
+/* Individual seller card styles */
+.seller-card {
+    padding: 20px; /* Space inside the card */
+    width: calc(20% - 20px); /* Four cards per row with no margin */
+    margin: 0; /* Remove all margins */
+    text-align: center; /* Center the text in each card */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Add hover effect for each seller card */
+.seller-card:hover {
+    transform: scale(1.01); /* Scale up slightly on hover */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Image styles inside the card */
+.seller-card img {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Text inside each card */
+.seller-card p {
+    color: #333; /* Darker text for readability */
+    margin-bottom: 5px; /* Reduced space between text elements */
+    font-size: .85em;
+}
+
+.seller-card h1 {
+    color: #bc9127; /* Highlighted text color */
+    font-weight: 400; /* Normal font weight */
+    font-size: 1em; /* Adjust font size */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .seller-card {
+        width: calc(50% - 0px); /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .seller-card {
+        width: 100%; /* Full-width cards on mobile */
+    } 
+} 
+
+
+
+/* Icon container styles */
+.icon-container {
+    display: flex; /* Use flexbox to align icons */
+    justify-content: center; /* Center icons */
+    margin-top: 10px; /* Space between text and icons */
+}
+
+/* Icon styles */
+.icon {
+    font-size: 1.5rem; /* Adjust icon size */
+    color: #bc9127; /* Icon color */
+    margin: 0 5px; /* Space between icons */
+}
+
+/* Initially hide hover icons */
+.hover-icons {
+    opacity: 0; /* Make icons invisible initially */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Show hover icons on card hover */
+.seller-card:hover .hover-icons {
+    opacity: 1; /* Show icons on hover */
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed; /* Fixed position to cover the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: flex; /* Center the modal */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.modal-content {
+    background: #fff; /* White background for the modal */
+    padding: 20px; /* Space inside the modal */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 400px; /* Fixed width */
+}
+
+/* Close button styles */
+.modal-content button {
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #bc9127; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+

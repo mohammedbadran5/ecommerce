@@ -1,0 +1,84 @@
+.collection-section {
+    padding: 112px 0; /* Add some padding to the section */
+    
+    margin-top: 100px;
+}
+
+
+
+.collection {
+    display: flex; /* Use flexbox for the layout */
+    justify-content: space-between; /* Space between the image and the content */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px; /* Limit the width */
+    margin: 0 auto; /* Center the content */
+}
+
+/* Left side image */
+.collection-img img {
+    width: 100%; /* Ensure the image covers the div */
+    max-width: 600px; /* Limit the maximum width of the image */
+    height: 416px; /* Maintain aspect ratio */
+}
+
+/* Right side content */
+.content {
+    max-width: 450px; /* Limit the content width */
+    padding-right: 50px; /* Add spacing between the image and content */
+}
+
+/* Style for the 'New collection' text */
+.new-collection-text {
+    position: relative; /* To position the line */
+    font-size: 0.8rem;
+    color: #bc9127; /* Text color */
+    margin-bottom: 40px; /* Space below the text */
+    left: 134px;
+}
+
+.new-collection-text::before {
+    content: ""; /* Empty content for the line */
+    display: block; /* Block element for the line */
+    height: 0.5px; /* Line height */
+    width: 120px; /* Line width */
+    background-color: #bc9127; /* Line color */
+    position: absolute; /* Positioning the line */
+    left: -130px; /* Move it to the left */
+    top: 50%; /* Verticaly align the line with the text */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+/* Heading and paragraph */
+.content h1 {
+    font-size: 2.8rem; /* Larger heading */
+    color: #111; /* Darker heading color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.content p {
+    
+    line-height: 1.5; /* Better readability */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+/* Button styles */
+.shop-button {
+    background-color: #edb932; /* Yellow button color */
+    color: #1a1a1a; /* Whi#edb932 cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    border-radius: 0;
+    fill: #000;
+    height: 40px;
+    color: #000;
+    font-size: 0.75rem;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-color: #edb932;
+    font-weight: 600;
+}
+
+.shop-button:hover {
+    background-color: #edb932; /* Slightly darker yellow on hover */
+    border: none;
+}

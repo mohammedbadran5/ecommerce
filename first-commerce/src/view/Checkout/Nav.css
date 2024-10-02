@@ -1,0 +1,7 @@
+.nav-container2 {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 50px; /* Adjust the height as needed */
+    background-color: #fff; /* Set a background color */
+}

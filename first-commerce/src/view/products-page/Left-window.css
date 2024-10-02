@@ -1,0 +1,157 @@
+.window2 {
+    position: fixed;
+    top: 0;
+    left: 0; /* Align it to the left */
+    width: 300px; /* Adjust the width as needed */
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: dark overlay */
+    z-index: 999; /* Ensure it sits behind the modal */
+}
+
+.window-top2, .window-middle2, .window-bottom2 {
+    padding: 20px;
+}
+
+.window-top2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-bottom2 {
+    margin-top: auto;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    background-color: #edb932;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* Style for the search section */
+.search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+}
+
+.search button {
+    padding: 8px 12px;
+    background-color: #edb932;
+    margin-right: 15px;
+    color: black;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #edb932;
+}
+
+/* Style for the categories */
+.categories {
+    margin-bottom: 20px;
+}
+
+.categories h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Styling for the ul and li */
+.categories ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.categories li {
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    color: black;
+    padding-left: 30px;
+    cursor: pointer;
+    display: flex;
+    transition: .5s;
+    justify-content: space-between;
+}
+.categories li:hover{
+    color: #edb932;
+}
+
+.categories li:last-child {
+    border-bottom: none;
+}
+
+/* Option button styling */
+.categories button {
+    padding: 10px;
+    background-color: #edb932;
+    color: black;
+    border: none;
+    border-radius: 0px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 90%;
+}
+
+.categories button:hover {
+    background-color: #edb932;
+}
+
+/* White box style */
+.white-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.white-box h2 {
+    margin-top: 0;
+}
+
+.white-box p {
+    margin-bottom: 15px;
+}
+
+.white-box button {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.white-box button:hover {
+    background-color: #c82333;
+}

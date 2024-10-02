@@ -1,0 +1,93 @@
+.room {
+    display: flex; /* Use flexbox for horizontal layout */
+    position: relative; /* Position relative for absolute positioning of the text box */
+    overflow: hidden; /* Hide overflow from image */
+    margin-top: 100px;
+    
+}
+
+.room img {
+    width: 100%; /* Make image fill the width */
+    height: 700px; /* Set height to 600px */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.room-box {
+    position: absolute; /* Position box on top of the image */
+    top: 60%; /* Center vertically */
+    right: 10%; /* Position it to the right */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    background-color: white; /* White background with slight transparency */
+    padding: 20px; /* Padding around the text */
+    height: 550px;
+    border-radius: 0px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: 520px; /* Set a maximum width for the box */
+}
+
+.room-box h1 {
+    font-size: 38px; /* Title font size */
+    font-weight: 700;
+    color: #333; /* Title color */
+    margin-bottom: 10px; /* Space below the title */
+    margin-left: 50px;
+}
+
+.room-box p {
+    color: #555; /* Description color */
+    margin-bottom: 10px; /* Space below paragraphs */
+    margin-left: 50px;
+    line-height: 27px;
+}
+
+.points p {
+    color: #777; /* Points color */
+    margin: 5px 0; /* Space between point items */
+}
+
+
+.points {
+    display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+    margin-top: 20px;
+}
+
+.points p {
+    position: relative; /* Positioning context for the pseudo-element */
+    padding-left: 20px; /* Add space for the line */
+    margin: 5px 0; /* Space between point items */
+    margin-left: 50px;
+    font-weight: 700;
+}
+
+.points p::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely within the paragraph */
+    left: 0; /* Align to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    width: 15px; /* Width of the line */
+    height: 2px; /* Height of the line */
+    background-color: gold; /* Color of the line */
+}
+
+
+
+.gold-button {
+    background-color: #edb932; /* Gold background */
+    color: black; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 0px; /* Rounded corners */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: .3s;
+    width: 60%;
+    margin-left: 50px;
+    margin-top: 50px; /* Space above the button */
+}
+
+.gold-button:hover {
+    color: white;
+}
