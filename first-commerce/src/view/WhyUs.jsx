@@ -14,7 +14,10 @@ function Whyus() {
                     <h1 style={{ fontSize: 45 }}>Why Choose Us</h1>
                 </div>
                 <div className="right-part2">
-                        <button style={{ fontSize:17,fontWeight:100 }}>About us</button>
+                    <a href="/AboutUs">
+                    <button style={{ fontSize:17,fontWeight:100 }}>About us</button>
+                    </a>
+                        
                     </div>
             </div>
             <div className="feat">

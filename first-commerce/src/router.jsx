@@ -10,6 +10,7 @@ import MainCheckOut from "./view/Checkout/MainCheckOut.jsx";
 import ScrollToTop from "./view/Scrolltop.jsx";
 import RoomPage from "./view/Rooms/RoomPage.jsx";
 import MainAbout from "./view/Aboutus/MainAbout.jsx";
+import MainContact from "./view/Contact/MainContact.jsx";
 
 const router = createBrowserRouter([
     {
@@ -81,6 +82,15 @@ const router = createBrowserRouter([
             <>
                 <ScrollToTop />
                 <MainAbout />
+            </>
+        ),
+    },
+    {
+        path: '/ContactUs',
+        element: (
+            <>
+                <ScrollToTop />
+                <MainContact />
             </>
         ),
     },

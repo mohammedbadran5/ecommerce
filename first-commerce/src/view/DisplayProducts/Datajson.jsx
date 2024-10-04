@@ -150,7 +150,7 @@ const productsData = {
       {
         categorie:"Kitchen",
         name: "White Kitchen Island",
-        cost: "$5,350.75 Original price was: $5,350.75.$4,800.50",
+        cost: "$5,350.75",
         url: kit4,
       },
       {
@@ -176,7 +176,7 @@ const productsData = {
       {
         categorie:"LivingRoom",
         name: "Green Living Room Sofa",
-        cost: "$1,840.00 Original price was: $1,840.00.$1,200.00",
+        cost: "$1,840.00",
         url: live3,
       },
       {

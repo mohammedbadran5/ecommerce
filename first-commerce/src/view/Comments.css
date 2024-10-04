@@ -5,21 +5,46 @@
 
 }
 
-.header1 {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.left-part1 {
+.left-part3 {
+    position: relative; /* To position the line */
     font-size: 0.8rem;
+    margin-bottom: 80px; /* Space below the text */
+    width: 380px;
+    left: 50px;
 }
 
-.left-part1 h1 {
+
+.left-part3 h1{
     color: #1a1a1a;
-    font-size: 2rem; /* Larger font for the heading */
-    margin: 10px 0; /* Add margin for spacing */
+    width: 450px;
+}
+
+.left-part3 p {
+    position: relative; /* Position relative for the ::before element */
+    color: #bc9127; /* Dark text for readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    left: 10px;
+    font-size: 12px;
+}
+
+/* Add the ::before pseudo-element for "Best Seller" */
+.left-part3 p::before {
+    content: ""; /* Empty content for the line */
+    display: block; /* Block element for the line */
+    height: 0.5px; /* Line height */
+    width: 120px; /* Line width */
+    background-color: #bc9127; /* Line color */
+    position: absolute; /* Positioning the line */
+    left: 20px; /* Move it to the left */
+    top: 50%; /* Verticaly align the line with the text */
+    transform: translateY(-50%); /* Adjust vertical alignment */
 }
 
 

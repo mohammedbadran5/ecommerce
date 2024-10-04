@@ -59,11 +59,11 @@ function Header() {
                     <img style={{ width: 150, marginLeft: 100, marginTop: 10 }} className="logo" src={myIcon} alt="Logo" />
                 </div>
                 <div className="mid-side">
-                    <a href="">Home</a>
-                    <a href="">Products</a>
-                    <a href="">Rooms</a>
-                    <a href="">About Us</a>
-                    <a href="">Contact Us</a>
+                    <a href="/Home">Home</a>
+                    <a href="/Products">Products</a>
+                    <a href="/Rooms">Rooms</a>
+                    <a href="/AboutUs">About Us</a>
+                    <a href="/ContactUs">Contact Us</a>
                     
                     <span className="basket-icon" style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleWindow}>
                         <RiShoppingBasketLine icon={faShoppingBasket} style={{ fontSize: 24, color: '#edb932' }} />
@@ -80,7 +80,7 @@ function Header() {
                     egestas turpis sit etiam commodo viverra lacinia ipsum convallis sed augue
                      purus scelerisque non vestibulum elementum mi, pellentesque leo tincidunt integer.
                 </p>
-                <button className="shop-button">Shop Now</button>
+                <button href="/Products" className="shop-button">Shop Now</button>
             </header>
             {/* Conditionally render the shopping cart window */}
             {isWindowOpen && (

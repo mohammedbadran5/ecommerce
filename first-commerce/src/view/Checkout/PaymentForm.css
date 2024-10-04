@@ -1,71 +1,114 @@
-body {
-    overflow: auto; /* Allow scrolling */
+.payment-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the start to allow scrolling */
+    height: 650px; /* Full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Add padding */
 }
 
 .payment-form {
-    display: flex;
-    flex-direction: column; /* Stack rows vertically */
-    max-width: 1000px; /* Maximum width for better layout */
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin-top: 50px;
     background-color: white;
+    width: 1000px;
+    border-radius: 8px; /* Optional: add some rounding to the corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow effect */
+    padding: 20px; /* Add some padding */
 }
 
-h2 {
-    text-align: center; /* Center the main title */
+.form-layout {
+    display: flex; /* Use flexbox for the layout */
+}
+
+.left-part {
+    flex: 1; /* Allow the left part to take up equal space */
+    margin-right: 20px; /* Space between left and right parts */
+}
+
+.right-part {
+    flex: 1; /* Allow the right part to take up equal space */
 }
 
 .billing-details {
     display: flex;
-    flex-direction: column; /* Stack rows vertically */
-    gap: 20px; /* Space between rows */
+    flex-direction: column; /* Stack the fields vertically */
 }
 
-/* Each row styling */
-.row {
-    display: flex; 
-    justify-content: space-between; /* Space out inputs */
-    gap: 10px; /* Space between inputs */
-}
-
-/* For inputs */
-input, select, textarea {
-    padding: 10px;
-    margin: 5px 0; /* Vertical margin */
-    border: 1px solid #ccc;
-    border-radius: 4px;
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 15px; /* Space between fields */
+    font-size: 16px; /* Font size */
     width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width */
+    transition: border 0.3s; /* Transition for border color */
 }
 
-/* For two input fields in a row */
-.row.double input {
-    flex: 1; /* Equal space for both inputs */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none; /* Remove default outline */
 }
 
-.label {
-    margin-bottom: 10px;
-    display: block; /* Block display for better spacing */
+textarea {
+    height: 100px; /* Set a height for the text area */
+    resize: none; /* Disable resizing */
 }
 
-.error {
-    color: red;
-    font-size: 0.9em;
+.cart-table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #ddd; /* Add border to table cells */
+    padding: 8px; /* Add padding to cells */
+    text-align: left; /* Align text to the left */
+}
+
+.cart-table th {
+    background-color: #f2f2f2; /* Light background for header */
 }
 
 .pay-button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px; /* Add margin on top */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline-block for proper sizing */
+    margin: 4px 2px; /* Margins for spacing */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 4px; /* Rounded corners */
 }
 
 .pay-button:hover {
-    background-color: #218838;
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Error styling */
+.error {
+    color: red; /* Red text for errors */
+    font-size: 14px; /* Slightly smaller font */
+    margin-top: -10px; /* Reduce space above error message */
+    margin-bottom: 10px; /* Space below error message */
+}
+
+
+
+.left-part .add-to-cart{
+    width: 100%;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.left-part .add-to-cart:hover{
+    color: white;
 }

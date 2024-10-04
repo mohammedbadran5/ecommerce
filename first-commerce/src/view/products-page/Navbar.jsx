@@ -33,15 +33,12 @@ function Navbar() {
                     <img style={{ width: 150, marginLeft: 100, marginTop: 10 }} className="logo1" src={myIcon} alt="Logo" />
                 </div>
                 <div className="mid-side1">
-                    <a href="">Home</a>
-                    <a href="">Products</a>
-                    <a href="">Rooms</a>
-                    <a href="">About Us</a>
-                    <a href="">Contact Us</a>
-                    <span className="basket-icon1" style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleWindow}>
-                        <FontAwesomeIcon icon={faShoppingBasket} style={{ fontSize: 20, color: '#edb932' }} />
-                        <span className="badge1">0</span>
-                    </span>
+                    <a href="/Home">Home</a>
+                    <a href="/Products">Products</a>
+                    <a href="/Rooms">Rooms</a>
+                    <a href="/AboutUs">About Us</a>
+                    <a href="/ContactUs">Contact Us</a>
+                   
                 </div>
             </nav>
 

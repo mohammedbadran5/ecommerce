@@ -18,7 +18,10 @@ function Collection() {
                             faucibus habitasse lectus vestibulum leo, odio dolor quis maecenas 
                             faucibus vulputate pharetra nunc sed maecenas diam quisque habitasse.
                         </p>
-                        <button style={{ fontSize:16 }} className="right-part3">Shop This Collection</button>
+                        <a href="./Display/LivingRoom">
+                        <button style={{ fontSize:16 }} className="right-part3">Shop This Collection</button
+                        ></a>
+                        
                     </div>
                 </div>
             </section>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom'; // Import useLocation to access passed state
+import { useLocation } from 'react-router-dom';
 import InputField from './InputField';
 import DropdownField from './DropdownField';
 import TextAreaField from './TextAreaField';
@@ -14,8 +14,8 @@ const countries = [
 ];
 
 const PaymentForm = () => {
-    const location = useLocation(); // Access the location object
-    const { cartItems } = location.state || { cartItems: [] }; // Get cartItems from location state
+    const location = useLocation();
+    const { cartItems } = location.state || { cartItems: [] };
     const [formValues, setFormValues] = useState({
         usernameOrEmail: '',
         firstName: '',
@@ -40,7 +40,6 @@ const PaymentForm = () => {
 
     const validate = () => {
         const newErrors = {};
-        // Example validation logic (you can customize as needed)
         if (!formValues.firstName) newErrors.firstName = 'First name is required';
         if (!formValues.lastName) newErrors.lastName = 'Last name is required';
         if (!formValues.city) newErrors.city = 'City is required';
@@ -58,123 +57,157 @@ const PaymentForm = () => {
         }
     };
 
+    const totalCost = cartItems.reduce((acc, cartItem) => {
+        const cost = parseFloat(cartItem.product.cost.replace(/[$,]/g, '')); // Convert string to number
+        return acc + (cost * cartItem.quantity); // Ensure quantity is also a number
+    }, 0).toFixed(2);
+    
+
     return (
         <div className="payment-form-container">
             <form className="payment-form" onSubmit={handleSubmit} aria-label="Payment Information Form">
-                <h2>Billing Details</h2>
-                <div className="billing-details">
-                    <InputField
-                        label="First Name *"
-                        name="firstName"
-                        value={formValues.firstName}
-                        onChange={handleChange}
-                        error={errors.firstName}
+                <div className="form-layout">
+                    <div className="left-part">
+                        <h2>Customer Information</h2>
                         
-                    />
-                    <InputField
-                        label="Last Name *"
-                        name="lastName"
-                        value={formValues.lastName}
-                        onChange={handleChange}
-                        error={errors.lastName}
-                    />
-                    <InputField
-                        label="Company Name"
-                        name="company"
-                        value={formValues.company}
-                        onChange={handleChange}
-                    />
-                    <DropdownField
-                        label="Country"
-                        name="country"
-                        options={countries}
-                        value={formValues.country}
-                        onChange={handleChange}
-                    />
-                    <InputField
-                        label="House Number *"
-                        name="houseNumber"
-                        value={formValues.houseNumber}
-                        onChange={handleChange}
-                    />
-                    <InputField
-                        label="Suite, Unit, etc (optional)"
-                        name="apartment"
-                        value={formValues.apartment}
-                        onChange={handleChange}
-                    />
-                    <InputField
-                        label="Town/City *"
-                        name="city"
-                        value={formValues.city}
-                        onChange={handleChange}
-                        error={errors.city}
-                    />
-                    <InputField
-                        label="ZIP Code *"
-                        name="zipCode"
-                        value={formValues.zipCode}
-                        onChange={handleChange}
-                        error={errors.zipCode}
-                    />
-                    <InputField
-                        label="Phone *"
-                        name="phone"
-                        value={formValues.phone}
-                        onChange={handleChange}
-                        error={errors.phone}
-                    />
-                </div>
+                        <InputField
+                            placeholder="Email *"
+                            name="email"
+                            type="email" // Specify the input type
+                            value={formValues.email}
+                            onChange={handleChange}
+                            error={errors.email} // Show error if email is invalid
+                        />
+                        <hr />
+                        <h2>Billing Details</h2>
+                        <div className="billing-details">
+                            <InputField
+                                placeholder="First Name *"
+                                name="firstName"
+                                value={formValues.firstName}
+                                onChange={handleChange}
+                                error={errors.firstName}
+                            />
+                            <InputField
+                                placeholder="Last Name *"
+                                name="lastName"
+                                value={formValues.lastName}
+                                onChange={handleChange}
+                                error={errors.lastName}
+                            />
+                            <InputField
+                                placeholder="Company Name"
+                                name="company"
+                                value={formValues.company}
+                                onChange={handleChange}
+                            />
+                            <DropdownField
+                                placeholder="Country"
+                                name="country"
+                                options={countries}
+                                value={formValues.country}
+                                onChange={handleChange}
+                            />
+                            <InputField
+                                placeholder="House Number *"
+                                name="houseNumber"
+                                value={formValues.houseNumber}
+                                onChange={handleChange}
+                            />
+                            <InputField
+                                placeholder="Suite, Unit, etc (optional)"
+                                name="apartment"
+                                value={formValues.apartment}
+                                onChange={handleChange}
+                            />
+                            <InputField
+                                placeholder="Town/City *"
+                                name="city"
+                                value={formValues.city}
+                                onChange={handleChange}
+                                error={errors.city}
+                            />
+                            <InputField
+                                placeholder="ZIP Code *"
+                                name="zipCode"
+                                value={formValues.zipCode}
+                                onChange={handleChange}
+                                error={errors.zipCode}
+                            />
+                            <InputField
+                                placeholder="Phone *"
+                                name="phone"
+                                value={formValues.phone}
+                                onChange={handleChange}
+                                error={errors.phone}
+                            />
+                        </div>
+                        <hr />
 
-                <h3>Additional Information</h3>
-                <TextAreaField
-                    label="Notes"
-                    name="notes"
-                    value={formValues.notes}
-                    onChange={handleChange}
-                />
+                        <h3>Additional Information</h3>
+                        <TextAreaField
+                            placeholder="Notes"
+                            name="notes"
+                            value={formValues.notes}
+                            onChange={handleChange}
+                        />
+                        <hr />
+                        
+                        <h3>Payment</h3>
+                        <CouponField
+                            placeholder="Have a Coupon? Enter it"
+                            name="coupon"
+                            value={formValues.coupon}
+                            onChange={handleChange}
+                        />
+                        <button type="submit" className="add-to-cart">
+                            PLACE ORDER
+                        </button>
 
-                <h3>Payment</h3>
-                <CouponField
-                    label="Have a Coupon? Enter it"
-                    name="coupon"
-                    value={formValues.coupon}
-                    onChange={handleChange}
-                />
-                <button type="submit" className="pay-button">Pay</button>
-            </form>
+                    </div>
 
-            <h2>Your Cart Items</h2>
-            {cartItems.length > 0 ? (
-                <table className="cart-table">
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {cartItems.map((cartItem, index) => {
-                            const { product, quantity } = cartItem;
-                            const subtotal = (parseFloat(product.cost.replace(/[$]/, '')) * quantity).toFixed(2);
-                            return (
-                                <tr key={index}>
-                                    <td>{product.name}</td>
-                                    <td>${parseFloat(product.cost.replace(/[$]/, '')).toFixed(2)}</td>
-                                    <td>{quantity}</td>
-                                    <td>${subtotal}</td>
+                    <div className="right-part">
+                    <h2>Your order</h2>
+                    {cartItems.length > 0 ? (
+                        <table className="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
                                 </tr>
-                            );
-                        })}
-                    </tbody>
-                </table>
-            ) : (
-                <p>No items in your cart.</p>
-            )}
+                            </thead>
+                            <tbody>
+                                {cartItems.map((cartItem, index) => {
+                                    const { product, quantity } = cartItem;
+                                    const subtotal = (parseFloat(product.cost.replace(/[$,]/g, '')) * quantity).toFixed(2);
+                                    return (
+                                        <tr key={index}>
+                                            <td><img src={product.url} alt={product.name} style={{ width: '50px', height: '50px' }} /></td>
+                                            <td>{product.name}</td>
+                                            <td>{quantity}</td>
+                                            <td>${subtotal}</td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colSpan="3">Total:</td>
+                                    <td>${totalCost}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    ) : (
+                        <p>No items in your cart.</p>
+                    )}
+                </div>
+                </div>
+            </form>
         </div>
     );
 };
+
 
 export default PaymentForm;

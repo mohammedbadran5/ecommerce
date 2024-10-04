@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"; // Import Link
 import "./Products-box.css";
 import productsData from "../DisplayProducts/Datajson";
 import Leftwindow from './Left-window'; // Import Leftwindow component
+import { VscSettings } from "react-icons/vsc";
 
 function ProductsBox() {
     const [isLeftWindowOpen, setLeftWindowOpen] = useState(false); // State to control Leftwindow visibility
@@ -26,9 +27,13 @@ function ProductsBox() {
     return (
         <div className="products-box">
             <div className="upper-part">
-                <button onClick={toggleLeftWindow}>Options</button>
+                <button onClick={toggleLeftWindow}>
+                    <VscSettings style={{ marginRight: '5px' }} /> {/* Optional: Add margin for spacing */}
+                    Options
+                </button>
                 <p>Showing {productsToDisplay.length} results</p>
             </div>
+
 
             <div className="cards">
                 {productsToDisplay.map((product, index) => (

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./Navy.css";
+import "./Navy2.css";
 import myIcon from './dark-logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'; // Shopping basket icon
 import { RiShoppingBasketLine } from "react-icons/ri";
 
 
-function Navy() {
+function Navy2() {
     const [isWindowOpen, setWindowOpen] = useState(false);
     const [cartItems, setCartItems] = useState([]);
 
@@ -67,7 +67,6 @@ function Navy() {
                     <a style={blacka} href="/Rooms">Rooms</a>
                     <a style={blacka} href="/AboutUs">About Us</a>
                     <a style={blacka} href="/ContactUs">Contact Us</a>
-
                     
                     <span className="basket-icon" style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleWindow}>
                         <RiShoppingBasketLine icon={faShoppingBasket} style={{ fontSize: 24, color: '#edb932' }} />
@@ -76,9 +75,9 @@ function Navy() {
                 </div>
             </nav>
            <div className="title">
-                <h1>ROOMS</h1>
-                <p>Vestibulum, diam vulputate amet cras in diam quis turpis curabitur tellus aliquet tellus 
-                   iaculis tempus, sollicitudin massa duis eleifend egestas turpis sit etiam.</p>
+                <h1>Contact Us</h1>
+                <p>Tempus amet, sit erat malesuada lorem purus dictum pretium, posuere sagittis ultricies 
+                    enim massa nisi neque augue in condimentum diam commodo ornare.</p>
            </div>
             {/* Conditionally render the shopping cart window */}
             {isWindowOpen && (
@@ -94,4 +93,4 @@ function Navy() {
     );
 }
 
-export default Navy;
+export default Navy2;

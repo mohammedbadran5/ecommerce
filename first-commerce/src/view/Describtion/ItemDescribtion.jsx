@@ -29,11 +29,23 @@ const ItemDescribtion = () => {
 
     const handleAddToCart = () => {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-        const updatedCartItems = [...cartItems, { product, quantity }];
-        localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
-        alert("The item has been added to cart!");
+    
+        // Check if the product with the same name already exists in the cart
+        const existingCartItemIndex = cartItems.findIndex((item) => item.product.name === product.name);
+    
+        if (existingCartItemIndex !== -1) {
+            // If the product exists, update the quantity of the existing product
+            cartItems[existingCartItemIndex].quantity += quantity;
+        } else {
+            // If the product is new, add it to the cart
+            cartItems.push({ product, quantity });
+        }
+    
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        alert("The item has been added to the cart!");
         setAddedToCart(true);
     };
+    
 
     const handleCheckCart = () => {
         navigate('../DisplayProductInfo/cart'); // Navigate to the Cart page without passing state
@@ -52,19 +64,25 @@ const ItemDescribtion = () => {
                     </h3>
                     <p>Nemo malesuada animi consectetur, cras consectetuer laborum tenetur, cum, lacus nemo imperdiet facilisis! Aute metus, lorem primis anim. Eros dolorem.</p>
                     
-                    <div className="quantity-control">
-                        <button onClick={handleDecrease}>-</button>
-                        <span>{quantity}</span>
-                        <button onClick={handleIncrease}>+</button>
-                    </div>
+                   <div className="actions-container">
+    <div className="quantity-control">
+        <button onClick={handleDecrease}>-</button>
+        <span>{quantity}</span>
+        <button onClick={handleIncrease}>+</button>
+    </div>
 
-                    <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
+    <button className="add-to-cart" onClick={handleAddToCart}>
+        Add to Cart
+        {addedToCart && <span style={{ marginLeft: '5px', color: 'black', marginLeft: 20,}}>✔</span>}
+    </button>
 
-                    {addedToCart && (
-                        <div className="check-cart">
-                            <button className='checkbutton' onClick={handleCheckCart}>Check Your Cart</button>
-                        </div>
-                    )}
+    {addedToCart && (
+        <div className="check-cart">
+            <button className="checkbutton" onClick={handleCheckCart}>Check Your Cart</button>
+        </div>
+    )}
+</div>
+
                 </div>
             </div>
 

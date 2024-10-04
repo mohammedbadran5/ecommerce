@@ -1,20 +1,21 @@
+// EmailField.js
 import React from 'react';
 
-const InputField = ({ name, value, onChange, error, placeholder, required = false }) => {
+const EmailField = ({ label, name, value, onChange, error, required = false }) => {
     return (
-        <div className="input-field">
+        <label>
+            {label}{required && '*'}
             <input
-                type="text"
+                type="email"
                 name={name}
                 value={value}
                 onChange={onChange}
-                placeholder={placeholder} // Use placeholder directly
                 required={required}
                 aria-describedby={`${name}Error`}
             />
             {error && <span className="error" id={`${name}Error`}>{error}</span>}
-        </div>
+        </label>
     );
 };
 
-export default InputField;
+export default EmailField;

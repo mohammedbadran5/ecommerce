@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'; // Import Link
 import productsData from './Datajson';
 import Window from "../products-page/Left-window";
 import './CategoriesPage.css';
+import { VscSettings } from "react-icons/vsc";
+
 
 const CategoriesPage = ({ category }) => {
   const products = productsData[category.toLowerCase()] || [];
@@ -20,7 +22,10 @@ const CategoriesPage = ({ category }) => {
     <div className="products-box">
       <div className="upper-part">
         <h1 style={{ color:'black',fontWeight:100 }}>{category}</h1>
-        <button onClick={toggleWindow}>Options</button> {/* Button to open the Window */}
+        <button onClick={toggleWindow}>
+                    <VscSettings style={{ marginRight: '5px' }} /> {/* Optional: Add margin for spacing */}
+                    Options
+                </button>
       </div>
       <div className="products-list">
         {products.length > 0 ? (

@@ -1,14 +1,14 @@
 import React from "react";
 import "./window.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'; // Close icon
 import { IoCloseSharp } from "react-icons/io5";
+
 function Window({ cartItems, onClose, handleQuantityChange, handleRemoveItem }) {
     // Function to calculate the total price for each item based on quantity
     const calculateTotalPrice = (cost, quantity) => {
         const costNumber = parseFloat(cost.replace(/[$]/, '')) || 0;
         return (costNumber * quantity).toFixed(2);
     };
+
     const handleContinueShopping = () => {
         window.location.href = "http://localhost:5173/Products"; // Navigate to Products page
     };
@@ -18,7 +18,7 @@ function Window({ cartItems, onClose, handleQuantityChange, handleRemoveItem }) 
             <div className="window-top">
                 <h4>Shopping Cart</h4>
                 <IoCloseSharp onClick={onClose} style={{ cursor: 'pointer', color: 'black', fontSize: '24px' }} />
-                </div>
+            </div>
             <div className="window-middle">
                 {cartItems.length > 0 ? (
                     <ul className="cart-items-list">
@@ -42,7 +42,7 @@ function Window({ cartItems, onClose, handleQuantityChange, handleRemoveItem }) 
                                         </div>
                                     </div>
                                     {/* Close icon to remove product */}
-                                    <IoCloseSharp onClick={() => handleRemoveItem(index)}  style={{ cursor: 'pointer', color: 'black', fontSize: '24px' }} />
+                                    <IoCloseSharp onClick={() => handleRemoveItem(index)} style={{ cursor: 'pointer', color: 'black', fontSize: '24px' }} />
                                 </li>
                             );
                         })}

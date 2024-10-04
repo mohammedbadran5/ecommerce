@@ -9,15 +9,23 @@ import { faShoppingBasket, faCircleXmark } from '@fortawesome/free-solid-svg-ico
 const CartPage = () => {
     const [cartItems, setCartItems] = useState([]);
     const navigate = useNavigate(); // Initialize navigate
+    
 
     useEffect(() => {
         const items = JSON.parse(localStorage.getItem('cartItems')) || [];
         setCartItems(items);
     }, []);
 
-    const handleQuantityChange = (index, newQuantity) => {
+    const handleQuantityChange = (product, newQuantity) => {
         const updatedCartItems = [...cartItems];
-        updatedCartItems[index].quantity = Math.max(1, newQuantity);
+        const existingItemIndex = updatedCartItems.findIndex((item) => item.product.id === product.id);
+    
+        if (existingItemIndex !== -1) {
+            updatedCartItems[existingItemIndex].quantity = Math.max(1, newQuantity);
+        } else {
+            updatedCartItems.push({ product, quantity: newQuantity });
+        }
+    
         setCartItems(updatedCartItems);
         localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
     };

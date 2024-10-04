@@ -49,7 +49,7 @@ function Cards() {
                     </div>
                 ))}
             </section>
-
+            
             {selectedProduct && (
                 <Modal
                     product={selectedProduct}
@@ -73,19 +73,19 @@ function Cards() {
 // Helper function to get a specified number of random products
 const getRandomProducts = (count) => {
     const categories = Object.keys(productsData);
-    const selectedProducts = new Set();
+    let allProducts = [];
 
-    while (selectedProducts.size < count) {
-        const category = categories[Math.floor(Math.random() * categories.length)];
-        const products = productsData[category];
+    // Combine products from all categories
+    categories.forEach(category => {
+        const products = productsData[category].map(product => ({ ...product, category }));
+        allProducts = [...allProducts, ...products];
+    });
 
-        if (products.length > 0) {
-            const randomProduct = products[Math.floor(Math.random() * products.length)];
-            selectedProducts.add({ ...randomProduct, category });
-        }
-    }
+    // Shuffle the products array
+    const shuffledProducts = allProducts.sort(() => 0.5 - Math.random());
 
-    return Array.from(selectedProducts);
+    // Return the first 'count' products from the shuffled array
+    return shuffledProducts.slice(0, count);
 };
 
 export default Cards;

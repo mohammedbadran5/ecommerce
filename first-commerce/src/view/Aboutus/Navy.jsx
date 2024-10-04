@@ -62,11 +62,11 @@ function Navy() {
                     <img style={{ width: 150, marginLeft: 100, marginTop: 10 }} className="logo" src={myIcon} alt="Logo" />
                 </div>
                 <div className="mid-side">
-                    <a style={blacka} href="">Home</a>
-                    <a style={blacka} href="">Products</a>
-                    <a style={blacka} href="">Rooms</a>
-                    <a style={blacka} href="">About Us</a>
-                    <a style={blacka} href="">Contact Us</a>
+                    <a style={blacka} href="/Home">Home</a>
+                    <a style={blacka} href="/Products">Products</a>
+                    <a style={blacka} href="/Rooms">Rooms</a>
+                    <a style={blacka} href="/AboutUs">About Us</a>
+                    <a style={blacka} href="/ContactUs">Contact Us</a>
                     
                     <span className="basket-icon" style={{ position: 'relative', cursor: 'pointer' }} onClick={toggleWindow}>
                         <RiShoppingBasketLine icon={faShoppingBasket} style={{ fontSize: 24, color: '#edb932' }} />

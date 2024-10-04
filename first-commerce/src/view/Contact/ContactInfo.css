@@ -1,0 +1,109 @@
+/* General styles */
+.contact-left,
+.contact-right {
+  padding: 20px; /* Padding for both sides */
+  margin-left: 120px;
+}
+
+.contact-left {
+  width: 600px; /* Adjust width as needed */
+}
+
+.contact-left p {
+  font-size: 16px;
+  color: #555;
+}
+
+.contact-left h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-left .social-media {
+  margin-top: 20px;
+}
+
+.contact-left .social-media svg {
+  font-size: 16px;
+  margin-right: 15px;
+  cursor: pointer;
+  color: black; /* Icon color */
+}
+
+/* Layout for the container */
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* Change this to space-between for tighter spacing */
+  margin: 10px; /* Reduced margin to bring sections closer */
+}
+
+/* Right contact section */
+.contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between each contact row */
+}
+
+/* Each contact row */
+.first-contact {
+  display: flex;
+  align-items: center; /* Align icon to the top */
+  gap: 10px; /* Space between icon and the text container */
+  padding: 5px 0; /* Reduced padding for rows */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Container for text under the icon */
+.first-contact div {
+  display: flex;
+  flex-direction: column; /* Stack p and h2 vertically */
+}
+
+/* Flex container for icon and <p> */
+.first-contact .text-container {
+  display: flex; /* Use flex to align icon and <p> in a row */
+  align-items: center; /* Center the icon and <p> vertically */
+  gap: 10px; /* Space between icon and <p> */
+}
+
+/* Styles for icon */
+.first-contact svg {
+  font-size: 16px;
+  color: #edb932; /* Change icon color */
+}
+
+/* Styles for text */
+.first-contact p {
+  font-size: 18px;
+  margin: 0;
+  color: black;
+}
+
+.first-contact h2 {
+  font-size: 20px;
+  color: #7A7A7A;
+  font-weight: 400;
+  margin: 0; /* Remove margin */
+}
+
+/* Store location (OUR STORE with icon) */
+.store-location {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.store-location svg {
+  font-size: 24px; /* Size of the icon */
+  color: #edb932; /* Change icon color */
+  background-color: white;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.store-location p {
+  font-size: 14px;
+  color: #edb932;
+  margin: 0;
+}
